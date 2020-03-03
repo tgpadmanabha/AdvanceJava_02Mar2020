@@ -15,6 +15,12 @@ public class TestAddress
 		System.out.println(company1);
 		Company companyNested=(Company)context.getBean("companyNested");
 		System.out.println(companyNested);
+		Company companyWir=(Company)context.getBean("companyWir");
+		System.out.println(companyWir);
+		System.out.println(companyWir.getAddress().getCityName());
+		Company companyWir1=(Company)context.getBean("companyWir1");
+		System.out.println(companyWir1);
+		System.out.println(companyWir1.getAddress().getCityName());
 	}
 	
 }

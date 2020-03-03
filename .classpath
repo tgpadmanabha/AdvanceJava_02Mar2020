@@ -8,5 +8,8 @@
 	<classpathentry kind="lib" path="C:/Users/ptg/Downloads/lib/spring-context-5.0.0.RC1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ptg/Downloads/lib/spring-core-5.0.0.RC1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ptg/Downloads/lib/spring-expression-5.0.0.RC1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ptg/Downloads/lib/spring-jdbc-5.0.0.RC1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ptg/Downloads/lib/spring-tx-5.0.0.RC1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ptg/Downloads/lib/mysql-connector-java-5.1.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

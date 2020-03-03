@@ -1,4 +1,4 @@
-package com.collection;
+package com.jdbc;
 
 public class Book
 {

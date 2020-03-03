@@ -16,14 +16,16 @@
 	</bean>
 	<bean id="obj2" class="com.data.Data" p:id="20" p:name="Test" />
 	<bean id="address" class="com.data.Address" p:pincode="560045" p:cityName="Bengaluru" />
+	<!-- <bean id="address1" class="com.data.Address" p:pincode="560101" p:cityName="Bengaluru" /> -->
 	<bean id="company" class="com.data.Company" p:compId="1" p:compName="Harman">
 		<property name="address" ref="address"></property>
 	</bean>
 	<bean id="company1" class="com.data.Company" p:compId="1" p:compName="Harman" p:address-ref="address" />
+	<bean id="companyWir" class="com.data.Company" p:compId="2" p:compName="Harman Connected" autowire="byName"/>
+	<bean id="companyWir1" class="com.data.Company" p:compId="3" p:compName="Harman Connected Services" autowire="byType"/>
 	<bean id="companyNested" class="com.data.Company" p:compId="1" p:compName="Harman">
 		<property name="address">
 			<bean id="address" class="com.data.Address" p:pincode="560100" p:cityName="Bengaluru" />
 		</property>
 	</bean>
-	<!-- <bean id="companyNested1" class="com.data.Company" p:compId="1" p:compName="Harman" p:address=<bean id="address" class="com.data.Address" p:pincode="560100" p:cityName="Bengaluru" />/> -->
 </beans>
