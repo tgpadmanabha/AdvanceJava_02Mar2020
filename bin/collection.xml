@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="book1" class="com.collection.Book" p:isbn="Book1" p:publication="Publication1" p:bookName="Book1" p:price="10" />
+	<bean id="book2" class="com.collection.Book" p:isbn="Book2" p:publication="Publication2" p:bookName="Book2" p:price="20" />
+	<bean id="book3" class="com.collection.Book" p:isbn="Book3" p:publication="Publication3" p:bookName="Book3" p:price="30" />
+	<bean id="book4" class="com.collection.Book" p:isbn="Book4" p:publication="Publication4" p:bookName="Book4" p:price="40" />
+	<bean id="libraryList" class="com.collection.LibraryList">
+		<property name="books">
+			<list>
+				<ref bean="book1" />
+				<ref bean="book2" />
+				<ref bean="book3" />
+				<ref bean="book3" />
+				<ref bean="book4" />
+				<ref bean="book4" />
+			</list>
+		</property>
+	</bean>
+	<bean id="librarySet" class="com.collection.LibrarySet">
+		<property name="books">
+			<set>
+				<ref bean="book1" />
+				<ref bean="book2" />
+				<ref bean="book3" />
+				<ref bean="book3" />
+				<ref bean="book4" />
+				<ref bean="book4" />
+			</set>
+		</property>
+	</bean>
+	<bean id="libraryMap" class="com.collection.LibraryMap">
+		<property name="books">
+			<map>
+				<entry key="Book1" value-ref="book1" />
+				<entry key="Book2" value-ref="book2" />
+				<entry key="Book3" value-ref="book3" />
+				<entry key="Book4" value-ref="book4" />
+			</map>
+		</property>
+	</bean>
+	<bean id="country" class="com.collection.Country">
+		<property name="name" value="India"></property>
+		<property name="continent" value="Asia"></property>
+		<property name="stateCapitals">
+			<props>
+				<prop key="Maharashtra">Mumbai</prop>
+				<prop key="Goa">Panji</prop>
+				<prop key="Punjab">Chandigad</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="libraryList1" class="com.collection.LibraryList">
+		<property name="books">
+			<util:list>
+				<ref bean="book1"></ref>
+				<ref bean="book2"></ref>
+				<ref bean="book3"></ref>
+			</util:list>
+		</property>
+	</bean>
+
+</beans>

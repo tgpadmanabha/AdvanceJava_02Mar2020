@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="obj" class="com.data.Data">
+		<property name="id" value="12"></property>
+		<property name="name" value="abcd"></property>
+	</bean>
+	<bean id="obj_const" class="com.data.Data">
+		<constructor-arg value="10" name="id"></constructor-arg>
+		<constructor-arg value="abcd new" name="name"></constructor-arg>
+	</bean>
+	<bean id="obj2" class="com.data.Data" p:id="20" p:name="Test" />
+	<bean id="address" class="com.data.Address" p:pincode="560045" p:cityName="Bengaluru" />
+	<bean id="company" class="com.data.Company" p:compId="1" p:compName="Harman">
+		<property name="address" ref="address"></property>
+	</bean>
+	<bean id="company1" class="com.data.Company" p:compId="1" p:compName="Harman" p:address-ref="address" />
+	<bean id="companyNested" class="com.data.Company" p:compId="1" p:compName="Harman">
+		<property name="address">
+			<bean id="address" class="com.data.Address" p:pincode="560100" p:cityName="Bengaluru" />
+		</property>
+	</bean>
+	<!-- <bean id="companyNested1" class="com.data.Company" p:compId="1" p:compName="Harman" p:address=<bean id="address" class="com.data.Address" p:pincode="560100" p:cityName="Bengaluru" />/> -->
+</beans>
